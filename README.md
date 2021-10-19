@@ -26,6 +26,7 @@ Our Architecture:<br><br>
 <img src="assets/GDSchema.png" alt="Cat DCGAN Architecture"/>
 
 ## Getting Started 📝
+- Clone the repo and run `pip install -r requirements.txt`
 - Download the dataset here: https://www.kaggle.com/crawford/cat-dataset
 - <b> Download the model checkpoint </b> : https://drive.google.com/drive/folders/1zdZZ91fjOUiOsIdAQKZkUTATXzqy7hiz?usp=sharing
 - Type `sh start.sh` it will handle extract, remove outliers, normalization and face centering
