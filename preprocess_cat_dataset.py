@@ -80,11 +80,10 @@ def preprocessCatFace(coords, image):
 	# Return the crop.
 	return crop
 
-def describePositive():
-	output = open('log.txt', 'w')
-	length = len(os.listdir("cat_dataset/"))
+def describePositive(dataset_dir, cats_64_dir, cats_128_dir):
+	length = len(os.listdir(dataset_dir))
 	with tqdm(total=length) as pbar:
-		for c,imagePath in enumerate(glob.glob('cat_dataset/*.jpg')):
+		for c,imagePath in enumerate(glob.glob(f"{dataset_dir}/*.jpg")):
 			# Open the '.cat' annotation file associated with this
 			# image.
 			input = open('%s.cat' % imagePath, 'r')
@@ -102,13 +101,9 @@ def describePositive():
 			# Save the crop to folders based on size
 			h, w, colors = crop.shape
 			if min(h,w) >= 64:
-				Path1 = imagePath.replace("cat_dataset", "cats_bigger_than_64x64")
+				Path1 = imagePath.replace(dataset_dir, cats_64_dir)
 				cv2.imwrite(Path1, crop)
 			if min(h,w) >= 128:
-				Path2 = imagePath.replace("cat_dataset", "cats_bigger_than_128x128")
+				Path2 = imagePath.replace(dataset_dir, cats_128_dir)
 				cv2.imwrite(Path2, crop)
 			pbar.update(1)
-			# Append the cropped face and its bounds to the
-			# positive description.
-			#h, w = crop.shape[:2]
-			#print (cropPath, 1, 0, 0, w, h, file=output)

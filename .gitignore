@@ -1,3 +1,5 @@
 __pycache__/
 cat-dataset/
+cats_bigger_than_128x128/
+cats_bigger_than_64x64/
 kaggle.json
