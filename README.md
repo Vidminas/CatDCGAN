@@ -23,10 +23,8 @@ If you want to implement it by yourself and understand how it works, please read
 
 
 ## Important note 🤔
-<b> You can't run this on your computer </b> (except if you have GPUs or wait 10 years 😅), personally I train this DCGAN for 20 hours with Microsoft Azure and their Deep Learning Virtual Machine (they offer 170$)
+<b> You can't run this on your computer </b> (except if you have GPUs or wait 10 years 😅). Thomas Simonini recommends to train this DCGAN for 20 hours with Microsoft Azure and their Deep Learning Virtual Machine (they offer 170$)
 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-ads.dsvm-deep-learning
-<br>
-⚠️ I don't have any business relations with them. I just loved their excellent customer service.
 
 If you have some troubles to use follow the explainations of this excellent article here (without last the part fast.ai): https://medium.com/@manikantayadunanda/setting-up-deeplearning-machine-and-fast-ai-on-azure-a22eb6bd6429
 
