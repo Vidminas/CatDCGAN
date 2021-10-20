@@ -1,40 +1,26 @@
 # CatDCGAN 🐱‍💻
-A DGAN that generate Cat pictures
-<br>
-<img src="assets/output.png" alt="CatDCGAN Output" />
 
-<p> Cat DCGAN is a Deep Convolutional Generative Adversarial Network (DCGAN) <b>that generates pictures of cats</b> </p>
-This is an open source project 
-<br>
+Cat DCGAN is a Deep Convolutional Generative Adversarial Network (DCGAN) that generates pictures of cats.
+
+
+## Getting Started 📝
+- Clone this repo
+- <b>Download the pre-trained model</b>: https://drive.google.com/drive/folders/1zdZZ91fjOUiOsIdAQKZkUTATXzqy7hiz?usp=sharing
+- Place the downloaded model in the `models/` directory
+- Launch Jupyter Notebook `jupyter notebook --no-browser`
+- Open the Cat DCGAN notebook
+- <b>If you want to train from scratch</b>: change `from_checkpoint = False`
+- <b>If you want to train from last model saved (you save 20 hours of training 🎉)</b>: keep `from_checkpoint = True`
+- Follow the notes in the notebook and the tutorial
+
 
 ## The tutorial 📃
-If you want to implement it by yourself and understand how it works, <b>please read my article on FreeCodeCamp</b>  https://medium.freecodecamp.org/how-ai-can-learn-to-generate-pictures-of-cats-ba692cb6eae4
+If you want to implement it by yourself and understand how it works, please read Thomas Simonini's [article on FreeCodeCamp](https://medium.freecodecamp.org/how-ai-can-learn-to-generate-pictures-of-cats-ba692cb6eae4).
 
-<br>
 
 ## Links 🔗
 🌐 : https://simoninithomas.github.io/CatDCGAN/
-<br><br>
-<p> If you have any questions, <b> feel free to ask me: </b> </p>
-<p> 📧: <a href="mailto:hello@simoninithomas.com">hello@simoninithomas.com</a>  </p>
-<p> Github: https://github.com/simoninithomas/CatDCGAN </p>
-<p> 🌐 : https://www.simoninithomas.com </p>
-<p> Twitter: <a href="https://twitter.com/ThomasSimonini">@ThomasSimonini</a> </p>
 
-In this part we're going to implement the DCGAN.
-Our Architecture:<br><br>
-<img src="assets/GDSchema.png" alt="Cat DCGAN Architecture"/>
-
-## Getting Started 📝
-- Clone the repo and run `pip install -r requirements.txt`
-- Download the dataset here: https://www.kaggle.com/crawford/cat-dataset
-- <b> Download the model checkpoint </b> : https://drive.google.com/drive/folders/1zdZZ91fjOUiOsIdAQKZkUTATXzqy7hiz?usp=sharing
-- Type `sh start.sh` it will handle extract, remove outliers, normalization and face centering
-- Launch Jupyter Notebook `jupyter notebook --no-browser`
-- Launch CatDCGAN
-- Change `do_preprocess = True` ⚠️⚠️⚠️ important!
-- <b> If you want to train from scratch </b>: change `from_checkpoint = False`
-- <b> If you want to train from last model saved (you save 20 hours of training 🎉)</b> : change `from_checkpoint = True`
 
 ## Important note 🤔
 <b> You can't run this on your computer </b> (except if you have GPUs or wait 10 years 😅), personally I train this DCGAN for 20 hours with Microsoft Azure and their Deep Learning Virtual Machine (they offer 170$)
@@ -43,6 +29,7 @@ https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-ads.dsvm
 ⚠️ I don't have any business relations with them. I just loved their excellent customer service.
 
 If you have some troubles to use follow the explainations of this excellent article here (without last the part fast.ai): https://medium.com/@manikantayadunanda/setting-up-deeplearning-machine-and-fast-ai-on-azure-a22eb6bd6429
+
 
 ## Contributing 🙌
 If you want to contribute to the project, your help is very welcome. This is an open source project.
@@ -59,7 +46,12 @@ This project was made possible thanks to:
 - Siraj's Raval PokeGan https://github.com/llSourcell/Pokemon_GAN
 - The choice of learning rate by Alexia Jolicoeur-Martineau https://ajolicoeur.wordpress.com/cats/
 
+## Examples
 
-<br>
-<br>
-<img src="assets/training2.gif" alt="Training DCGAN" />
+Visualisation of generated images changing as the model trains:
+
+![Training DCGAN](assets/training2.gif)
+
+A grid of generated images:
+
+![CatDCGAN output](assets/output.png)
